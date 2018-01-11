@@ -24,7 +24,7 @@ class busqueda{
 				// console.log(i);
 				return i.title;
 			});
-			// console.log(list);
+			///console.log(list);
 			new Awesomplete(document.querySelector("#"+input),{
 				minChars: 3,
 				maxItems: 7,
