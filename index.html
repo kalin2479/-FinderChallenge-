@@ -15,14 +15,20 @@
             <div class="containerHeader">
                 <a href="javascript:void(0)" class="linkLogo">Finder challange</a>
                 <form id="buscarForm" class="formGrid">
-                    <input type="text"
-                        class="awesomplete"
-                        placeholder="Ingrese el título del Libro"
-                        name="libro"
-                        id="libro"
-                        data-list="Ada, Java, JavaScript, Brainfuck, LOLCODE, Node.js, Ruby on Rails" />
-                    <button type="button" name="buscar" disabled>Buscar</button>
-                    <a href="javascript:void(0)">Guardar búsqueda</a>
+                    <div class="row errorMsje">
+                        <a href="javascript:void(0)" class="close">x</a>
+                        <span>Error !!</span>
+                        <p></p>
+                    </div>
+                    <div class="row rowflex">
+                        <input type="text"
+                            class="awesomplete"
+                            placeholder="Ingrese el título del Libro"
+                            name="libro"
+                            id="libro"/>
+                        <button type="button" name="buscar" id="buscar" disabled>Buscar</button>
+                        <a href="javascript:void(0)">Guardar búsqueda</a>
+                    </div>
                 </form>
             </div>
         </header>
@@ -85,7 +91,7 @@
             </div>
         </div>
         <div class="content">
-            <div class="cardGrid">
+            <div class="cardGrid" id="cardGrid">
                 <div class="card">
                     <figure>
                         <img src="dist/image/1.jpg" alt="">

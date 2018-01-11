@@ -3,7 +3,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 6, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,51 +25,42 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 27, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 40, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 45, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 5, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 body {
   background: #f4f4f4;
 }
 
-/* line 7, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 body p {
   font-size: 0.75rem;
 }
 
-/* line 11, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container {
   -webkit-display: grid;
   -moz-display: grid;
@@ -78,22 +68,19 @@ body p {
   -o-display: grid;
   display: grid;
   grid-template-columns: 300px 1fr 1fr;
-  grid-template-rows: 100px auto;
+  grid-template-rows: auto auto;
   grid-column-gap: 0.5rem;
-  grid-template-areas: "header header header" "menu content content";
+  grid-template-areas: "header header header" "menu content content";
 }
 
-/* line 20, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header, .container .content, .container .menu {
   padding: 1.875rem;
 }
 
-/* line 23, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content {
   grid-area: content;
 }
 
-/* line 25, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .cardGrid {
   background: #f4f4f4;
   display: grid;
@@ -103,7 +90,10 @@ body p {
   grid-row-gap: 1rem;
 }
 
-/* line 34, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
+.container .content .pagination {
+  padding-top: 1.25rem;
+}
+
 .container .content .pagination .paginationGrid {
   display: flex;
   flex-direction: row;
@@ -112,7 +102,6 @@ body p {
   align-items: flex-start;
 }
 
-/* line 40, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .pagination .paginationGrid a {
   font-size: 0.875rem;
   font-weight: 400;
@@ -120,18 +109,15 @@ body p {
   text-decoration: none;
 }
 
-/* line 43, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .pagination .paginationGrid a:last-child {
   margin-left: 12px;
   position: relative;
 }
 
-/* line 47, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .pagination .paginationGrid a:hover {
   text-decoration: underline;
 }
 
-/* line 50, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .pagination .paginationGrid a:before {
   content: "";
   position: absolute;
@@ -142,7 +128,6 @@ body p {
   background: #1f1f1f;
 }
 
-/* line 64, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .card hgroup h3 {
   line-height: 3.5em;
   font-size: 1rem;
@@ -151,7 +136,6 @@ body p {
   color: #111312;
 }
 
-/* line 69, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .card hgroup p {
   font-size: 0.75rem;
   font-weight: 400;
@@ -160,13 +144,11 @@ body p {
   line-height: 1.5em;
 }
 
-/* line 77, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu {
   grid-area: menu;
   background: #f4f4f4;
 }
 
-/* line 81, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock h2 {
   font-size: 1.125rem;
   font-weight: 700;
@@ -174,17 +156,14 @@ body p {
   color: #111312;
 }
 
-/* line 85, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul {
   margin: 1.5625rem 0 1.5625rem;
 }
 
-/* line 87, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li {
   margin-left: 1.875rem;
 }
 
-/* line 89, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li a {
   font-size: 0.875rem;
   font-weight: 400;
@@ -194,17 +173,14 @@ body p {
   line-height: 1.5em;
 }
 
-/* line 94, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li a.active {
   color: #383838;
 }
 
-/* line 98, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li.open {
   background: rgba(67, 116, 187, 0.25);
 }
 
-/* line 101, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li ul {
   display: flex;
   flex-direction: row;
@@ -213,13 +189,11 @@ body p {
   align-items: flex-start;
 }
 
-/* line 108, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li ul li:last-child {
   margin-left: 0.9375rem;
   position: relative;
 }
 
-/* line 111, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li ul li:last-child:before {
   content: "";
   position: absolute;
@@ -230,18 +204,15 @@ body p {
   width: 0.0625rem;
 }
 
-/* line 123, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li.separate {
   margin-top: 1.25rem;
 }
 
-/* line 130, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header {
   grid-area: header;
   background: #f4f4f4;
 }
 
-/* line 133, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader {
   display: grid;
   grid-template-columns: 400px 1fr;
@@ -249,7 +220,6 @@ body p {
   grid-column-gap: 0.5rem;
 }
 
-/* line 139, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader a.linkLogo {
   font-size: 2.1875rem;
   font-weight: 800;
@@ -259,8 +229,7 @@ body p {
   letter-spacing: 0.05em;
 }
 
-/* line 146, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
-.container .header .containerHeader form {
+.container .header .containerHeader form .row.rowflex {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -268,8 +237,59 @@ body p {
   align-items: center;
 }
 
-/* line 152, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
-.container .header .containerHeader form input[type="text"] {
+.container .header .containerHeader form .row.errorMsje {
+  position: relative;
+  background: #f2dede;
+  border: 1px solid #fcaab7;
+  border-radius: 0.3125rem;
+  height: 3.4375rem;
+  text-align: center;
+  display: none;
+  margin-bottom: 1.25rem;
+}
+
+.container .header .containerHeader form .row.errorMsje a {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+  color: white;
+  top: 1.125rem;
+  right: 0.625rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: "Open Sans";
+  line-height: 1.25em;
+  background: rgba(170, 15, 38, 0.25);
+  transition: 0.5s all ease;
+}
+
+.container .header .containerHeader form .row.errorMsje a:hover {
+  color: #a94442;
+}
+
+.container .header .containerHeader form .row.errorMsje p, .container .header .containerHeader form .row.errorMsje span {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 0;
+  line-height: 4.0em;
+}
+
+.container .header .containerHeader form .row.errorMsje p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: "Open Sans";
+  color: #a94442;
+}
+
+.container .header .containerHeader form .row.errorMsje span {
+  font-size: 0.875rem;
+  font-weight: 800;
+  font-family: "Open Sans";
+  color: #a94442;
+}
+
+.container .header .containerHeader form .row input[type="text"] {
   border: 1px solid #6b6b6b;
   font-size: 0.875rem;
   font-weight: 400;
@@ -280,16 +300,14 @@ body p {
   width: 18.75rem;
 }
 
-/* line 159, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
-.container .header .containerHeader form input[type="text"]::placeholder {
+.container .header .containerHeader form .row input[type="text"]::placeholder {
   font-size: 0.875rem;
   font-weight: 400;
   font-family: "Open Sans";
   color: #050401;
 }
 
-/* line 164, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
-.container .header .containerHeader form button {
+.container .header .containerHeader form .row button {
   padding: 0rem 0.625rem;
   margin-left: 0.25rem;
   cursor: pointer;
@@ -305,8 +323,7 @@ body p {
   transition: 0.5s all ease;
 }
 
-/* line 173, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
-.container .header .containerHeader form a {
+.container .header .containerHeader form .row a {
   font-size: 0.875rem;
   font-weight: 700;
   font-family: "Open Sans";
@@ -320,9 +337,6 @@ body p {
   transition: 0.5s all ease;
 }
 
-/* line 179, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
-.container .header .containerHeader form a:hover {
+.container .header .containerHeader form .row a:hover {
   color: #297e61;
 }
-
-/*# sourceMappingURL=../../dist/css/style.map */

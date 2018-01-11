@@ -12,7 +12,7 @@ body{
 
     @include prefix(display, grid);
     grid-template-columns: 300px 1fr 1fr;
-    grid-template-rows: 100px auto;
+    grid-template-rows: auto auto;
     grid-column-gap : 0.5rem;
     grid-template-areas:
         "header header header"
@@ -31,6 +31,7 @@ body{
             grid-row-gap: 1rem;
         }
         .pagination{
+            padding-top : rem(20px);
             .paginationGrid{
                 display: flex;
                 flex-direction: row;
@@ -144,40 +145,84 @@ body{
                 }
             }
             form{
-                display : flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                justify-content : flex-start;
-                align-items: center;
-                input[type="text"]{
-                    border : 1px solid rgb(107, 107, 107);
-                    @include my-font(14px, 400, 'Open Sans');
-                    line-height : 2.5em;
-                    padding : rem(0px 10px 0);
-                    height : rem(40px);
-                    width : rem(300px);
-                    &::placeholder{
-                        @include my-font(14px, 400, 'Open Sans');
-                        color : rgb(5, 4, 1);
+                .row{
+                    &.rowflex{
+                        display : flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content : flex-start;
+                        align-items: center;
                     }
-                }
-                button{
-                    padding : rem(0px 10px);
-                    margin-left : rem(4px);
-                    cursor : pointer;
-                    width: rem(100px);
-                    height : rem(42px);
-                    @include my-font(18px, 700, 'Open Sans');
-                    @include prefix(transition,0.5s all ease);
-                }
-                a{
-                    @include my-font(14px, 700, 'Open Sans');
-                    color : rgb(12, 76, 219);
-                    text-decoration: none;
-                    margin-left : rem(8px);
-                    @include prefix(transition,0.5s all ease);
-                    &:hover{
-                        color : rgb(41, 126, 97);
+                    &.errorMsje{
+                        position : relative;
+                        background : #f2dede;
+                        border : 1px solid #fcaab7;
+                        border-radius : rem(5px);
+                        height : rem(55px);
+                        text-align : center;
+                        display : none;
+                        margin-bottom : rem(20px);
+                        a{
+                            position : absolute;
+                            width : rem(20px);
+                            height : rem(20px);
+                            display: block;
+                            color : white;
+                            top : rem(18px);
+                            right : rem(10px);
+                            @include my-font(14px, 400, 'Open Sans');
+                            line-height : 1.25em;
+                            background : rgba(170, 15, 38, 0.25);
+                            transition : 0.5s all ease;
+                            &:hover{
+                                color : #a94442;
+                            }
+                        }
+                        p,span{
+                            display : inline-block;
+                            vertical-align : top;
+                            margin-right : 0;
+                            line-height: 4.0em;
+                        }
+                        p{
+                            @include my-font(14px, 400, 'Open Sans');
+                            color : #a94442;
+                        }
+                        span{
+                            @include my-font(14px, 800, 'Open Sans');
+                            color : #a94442;
+                        }
+                    }
+                    input[type="text"]{
+                        border : 1px solid rgb(107, 107, 107);
+                        @include my-font(14px, 400, 'Open Sans');
+                        line-height : 2.5em;
+                        padding : rem(0px 10px 0);
+                        height : rem(40px);
+                        width : rem(300px);
+                        &::placeholder{
+                            @include my-font(14px, 400, 'Open Sans');
+                            color : rgb(5, 4, 1);
+                        }
+                    }
+                    button{
+                        padding : rem(0px 10px);
+                        margin-left : rem(4px);
+                        cursor : pointer;
+                        width: rem(100px);
+                        height : rem(42px);
+                        @include my-font(18px, 700, 'Open Sans');
+                        @include prefix(transition,0.5s all ease);
+                    }
+                    a{
+                        @include my-font(14px, 700, 'Open Sans');
+                        color : rgb(12, 76, 219);
+                        text-decoration: none;
+                        margin-left : rem(8px);
+                        @include prefix(transition,0.5s all ease);
+                        &:hover{
+                            color : rgb(41, 126, 97);
+                        }
                     }
                 }
             }
