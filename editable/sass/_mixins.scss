@@ -11,7 +11,7 @@ $prefixes: "webkit", "moz", "ms", "o", "none";
 }
 
 @mixin my-font($size, $bold, $family) {
-  font-size: $size;
+  font-size: rem($size);
   font-weight : $bold;
   font-family : $family;
 }

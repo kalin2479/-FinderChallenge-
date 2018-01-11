@@ -67,7 +67,7 @@ body {
 
 /* line 7, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 body p {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 /* line 11, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
@@ -114,7 +114,7 @@ body p {
 
 /* line 40, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .pagination .paginationGrid a {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   font-family: "Open Sans";
   text-decoration: none;
@@ -145,7 +145,7 @@ body p {
 /* line 64, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .card hgroup h3 {
   line-height: 3.5em;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   font-family: "Open Sans";
   color: #111312;
@@ -153,7 +153,7 @@ body p {
 
 /* line 69, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content .card hgroup p {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   font-family: "Open Sans";
   color: #111312;
@@ -168,7 +168,7 @@ body p {
 
 /* line 81, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock h2 {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   font-family: "Open Sans";
   color: #111312;
@@ -186,7 +186,7 @@ body p {
 
 /* line 89, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li a {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   font-family: "Open Sans";
   color: #218be2;
@@ -251,7 +251,7 @@ body p {
 
 /* line 139, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader a.linkLogo {
-  font-size: 35px;
+  font-size: 2.1875rem;
   font-weight: 800;
   font-family: "Open Sans";
   color: #1a1d1c;
@@ -271,7 +271,7 @@ body p {
 /* line 152, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader form input[type="text"] {
   border: 1px solid #6b6b6b;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   font-family: "Open Sans";
   line-height: 2.5em;
@@ -282,7 +282,7 @@ body p {
 
 /* line 159, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader form input[type="text"]::placeholder {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   font-family: "Open Sans";
   color: #050401;
@@ -295,7 +295,7 @@ body p {
   cursor: pointer;
   width: 6.25rem;
   height: 2.625rem;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   font-family: "Open Sans";
   -webkit-transition: 0.5s all ease;
@@ -307,7 +307,7 @@ body p {
 
 /* line 173, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader form a {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   font-family: "Open Sans";
   color: #0c4cdb;
