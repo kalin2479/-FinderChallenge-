@@ -9,7 +9,7 @@ body{
     }
 }
 .container{
-        
+
     @include prefix(display, grid);
     grid-template-columns: 300px 1fr 1fr;
     grid-template-rows: 100px auto;
@@ -22,7 +22,57 @@ body{
     }
     .content{
         grid-area : content;
-        background : grey;
+        .cardGrid{
+            background : rgb(244, 244, 244);
+            display : grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows : auto;
+            grid-column-gap : 1.5rem;
+            grid-row-gap: 1rem;
+        }
+        .pagination{
+            .paginationGrid{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content : flex-end;
+                align-items: flex-start;
+                a{
+                    @include my-font(14px, 400, 'Open Sans');
+                    text-decoration: none;
+                    &:last-child{
+                        margin-left : 12px;
+                        position : relative;
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                    &:before{
+                        content : "";
+                        position : absolute;
+                        top : rem(2px);
+                        left : rem(-6px);
+                        width : rem(1px);
+                        height : 75%;
+                        background : rgb(31, 31, 31);
+                    }
+                }
+            }
+        }
+        .card{
+            hgroup{
+                h3{
+                    line-height : 3.5em;
+                    @include my-font(16px, 700, 'Open Sans');
+                    color : rgb(17, 19, 18);
+                }
+                p{
+                    @include my-font(12px, 400, 'Open Sans');
+                    color : rgb(17, 19, 18);
+                    line-height : 1.5em;
+                }
+            }
+        }
     }
     .menu{
         grid-area : menu;
@@ -37,7 +87,7 @@ body{
                 > li{
                     margin-left : rem(30px);
                     a{
-                        @include my-font(14px, 700, 'Open Sans');
+                        @include my-font(14px, 400, 'Open Sans');
                         color : rgb(33, 139, 226);
                         text-decoration : none;
                         line-height : 1.5em;
@@ -59,11 +109,13 @@ body{
                                 margin-left : rem(15px);
                                 position: relative;
                                 &:before{
-                                    content : "|";
+                                    content : "";
                                     position: absolute;
-                                    top : 0px;
-                                    left : rem(-8px);
-                                    color : rgb(36, 36, 36);
+                                    top : rem(4px);
+                                    left : rem(-7px);
+                                    background : rgb(36, 36, 36);
+                                    height : 60%;
+                                    width : rem(1px);
                                 }
                             }
                         }
@@ -99,7 +151,9 @@ body{
                 align-items: center;
                 input[type="text"]{
                     border : 1px solid rgb(107, 107, 107);
-                    padding : rem(0 10px);
+                    @include my-font(14px, 400, 'Open Sans');
+                    line-height : 2.5em;
+                    padding : rem(0px 10px 0);
                     height : rem(40px);
                     width : rem(300px);
                     &::placeholder{

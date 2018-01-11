@@ -3,7 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 6, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+/* line 6, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -26,51 +26,51 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 27, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+/* line 27, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+/* line 31, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+/* line 34, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+/* line 37, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 40, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+/* line 40, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 45, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+/* line 45, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 5, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 5, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 body {
   background: #f4f4f4;
 }
 
-/* line 7, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 7, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 body p {
   font-size: 12px;
 }
 
-/* line 11, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 11, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container {
   -webkit-display: grid;
   -moz-display: grid;
@@ -80,27 +80,93 @@ body p {
   grid-template-columns: 300px 1fr 1fr;
   grid-template-rows: 100px auto;
   grid-column-gap: 0.5rem;
-  grid-template-areas: "header header header" "menu content content";
+  grid-template-areas: "header header header" "menu content content";
 }
 
-/* line 20, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 20, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header, .container .content, .container .menu {
   padding: 1.875rem;
 }
 
-/* line 23, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 23, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .content {
   grid-area: content;
-  background: grey;
 }
 
-/* line 27, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 25, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
+.container .content .cardGrid {
+  background: #f4f4f4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1rem;
+}
+
+/* line 34, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
+.container .content .pagination .paginationGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* line 40, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
+.container .content .pagination .paginationGrid a {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans";
+  text-decoration: none;
+}
+
+/* line 43, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
+.container .content .pagination .paginationGrid a:last-child {
+  margin-left: 12px;
+  position: relative;
+}
+
+/* line 47, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
+.container .content .pagination .paginationGrid a:hover {
+  text-decoration: underline;
+}
+
+/* line 50, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
+.container .content .pagination .paginationGrid a:before {
+  content: "";
+  position: absolute;
+  top: 0.125rem;
+  left: -0.375rem;
+  width: 0.0625rem;
+  height: 75%;
+  background: #1f1f1f;
+}
+
+/* line 64, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
+.container .content .card hgroup h3 {
+  line-height: 3.5em;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Open Sans";
+  color: #111312;
+}
+
+/* line 69, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
+.container .content .card hgroup p {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Open Sans";
+  color: #111312;
+  line-height: 1.5em;
+}
+
+/* line 77, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu {
   grid-area: menu;
   background: #f4f4f4;
 }
 
-/* line 31, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 81, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock h2 {
   font-size: 18px;
   font-weight: 700;
@@ -108,37 +174,37 @@ body p {
   color: #111312;
 }
 
-/* line 35, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 85, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul {
   margin: 1.5625rem 0 1.5625rem;
 }
 
-/* line 37, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 87, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li {
   margin-left: 1.875rem;
 }
 
-/* line 39, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 89, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li a {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   font-family: "Open Sans";
   color: #218be2;
   text-decoration: none;
   line-height: 1.5em;
 }
 
-/* line 44, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 94, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li a.active {
   color: #383838;
 }
 
-/* line 48, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 98, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li.open {
   background: rgba(67, 116, 187, 0.25);
 }
 
-/* line 51, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 101, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li ul {
   display: flex;
   flex-direction: row;
@@ -147,33 +213,35 @@ body p {
   align-items: flex-start;
 }
 
-/* line 58, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 108, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li ul li:last-child {
   margin-left: 0.9375rem;
   position: relative;
 }
 
-/* line 61, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 111, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li ul li:last-child:before {
-  content: "|";
+  content: "";
   position: absolute;
-  top: 0px;
-  left: -0.5rem;
-  color: #242424;
+  top: 0.25rem;
+  left: -0.4375rem;
+  background: #242424;
+  height: 60%;
+  width: 0.0625rem;
 }
 
-/* line 71, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 123, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .menu .menuBlock > ul > li.separate {
   margin-top: 1.25rem;
 }
 
-/* line 78, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 130, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header {
   grid-area: header;
   background: #f4f4f4;
 }
 
-/* line 81, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 133, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader {
   display: grid;
   grid-template-columns: 400px 1fr;
@@ -181,7 +249,7 @@ body p {
   grid-column-gap: 0.5rem;
 }
 
-/* line 87, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 139, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader a.linkLogo {
   font-size: 35px;
   font-weight: 800;
@@ -191,7 +259,7 @@ body p {
   letter-spacing: 0.05em;
 }
 
-/* line 94, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 146, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader form {
   display: flex;
   flex-direction: row;
@@ -200,15 +268,19 @@ body p {
   align-items: center;
 }
 
-/* line 100, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 152, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader form input[type="text"] {
   border: 1px solid #6b6b6b;
-  padding: 0 0.625rem;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans";
+  line-height: 2.5em;
+  padding: 0rem 0.625rem 0;
   height: 2.5rem;
   width: 18.75rem;
 }
 
-/* line 105, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 159, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader form input[type="text"]::placeholder {
   font-size: 14px;
   font-weight: 400;
@@ -216,7 +288,7 @@ body p {
   color: #050401;
 }
 
-/* line 110, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 164, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader form button {
   padding: 0rem 0.625rem;
   margin-left: 0.25rem;
@@ -233,7 +305,7 @@ body p {
   transition: 0.5s all ease;
 }
 
-/* line 119, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 173, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader form a {
   font-size: 14px;
   font-weight: 700;
@@ -248,7 +320,7 @@ body p {
   transition: 0.5s all ease;
 }
 
-/* line 125, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+/* line 179, /Volumes/Datos/sites-public/www/public_html/grid-css/taller/editable/sass/style.scss */
 .container .header .containerHeader form a:hover {
   color: #297e61;
 }
