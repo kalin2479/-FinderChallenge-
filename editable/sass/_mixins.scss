@@ -1,0 +1,17 @@
+$prefixes: "webkit", "moz", "ms", "o", "none";
+
+@mixin prefix($property, $arguments) {
+ @each $prefix in $prefixes {
+   @if $prefix == "none" {
+     #{$property}: $arguments;
+   } @else {
+     -#{$prefix}-#{$property}: $arguments;
+   }
+ }
+}
+
+@mixin my-font($size, $bold, $family) {
+  font-size: $size;
+  font-weight : $bold;
+  font-family : $family;
+}

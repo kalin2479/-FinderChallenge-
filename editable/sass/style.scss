@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+@import "../../node_modules/sass-rem/_rem.scss";
+@import "_mixins.scss";
+@import "_reset.scss";
+body{
+    background : rgb(244, 244, 244);
+    p{
+        font-size : 12px;
+    }
+}
+.container{
+        
+    @include prefix(display, grid);
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-rows: 100px auto;
+    grid-column-gap : 0.5rem;
+    grid-template-areas:
+        "header header header"
+        "menu content content";
+    .header , .content, .menu {
+        padding: rem(30px);
+    }
+    .content{
+        grid-area : content;
+        background : grey;
+    }
+    .menu{
+        grid-area : menu;
+        background : rgb(244, 244, 244);
+        .menuBlock{
+            h2{
+                @include my-font(18px, 700, 'Open Sans');
+                color : rgb(17, 19, 18);
+            }
+            > ul{
+                margin : rem(25px) 0 rem(25px);
+                > li{
+                    margin-left : rem(30px);
+                    a{
+                        @include my-font(14px, 700, 'Open Sans');
+                        color : rgb(33, 139, 226);
+                        text-decoration : none;
+                        line-height : 1.5em;
+                        &.active{
+                            color : rgb(56, 56, 56);
+                        }
+                    }
+                    &.open{
+                        background : rgba(67, 116, 187, 0.25);
+                    }
+                    ul{
+                        display : flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content : flex-start;
+                        align-items: flex-start;
+                        li{
+                            &:last-child{
+                                margin-left : rem(15px);
+                                position: relative;
+                                &:before{
+                                    content : "|";
+                                    position: absolute;
+                                    top : 0px;
+                                    left : rem(-8px);
+                                    color : rgb(36, 36, 36);
+                                }
+                            }
+                        }
+                    }
+                    &.separate{
+                        margin-top : rem(20px);
+                    }
+                }
+            }
+        }
+    }
+    .header{
+        grid-area : header;
+        background : rgb(244, 244, 244);
+        .containerHeader{
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            grid-template-rows: auto auto;
+            grid-column-gap : 0.5rem;
+            a{
+                &.linkLogo{
+                    @include my-font(35px, 800, 'Open Sans');
+                    color : rgb(26, 29, 28);
+                    text-decoration : none;
+                    letter-spacing : 0.05em;
+                }
+            }
+            form{
+                display : flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content : flex-start;
+                align-items: center;
+                input[type="text"]{
+                    border : 1px solid rgb(107, 107, 107);
+                    padding : rem(0 10px);
+                    height : rem(40px);
+                    width : rem(300px);
+                    &::placeholder{
+                        @include my-font(14px, 400, 'Open Sans');
+                        color : rgb(5, 4, 1);
+                    }
+                }
+                button{
+                    padding : rem(0px 10px);
+                    margin-left : rem(4px);
+                    cursor : pointer;
+                    width: rem(100px);
+                    height : rem(42px);
+                    @include my-font(18px, 700, 'Open Sans');
+                    @include prefix(transition,0.5s all ease);
+                }
+                a{
+                    @include my-font(14px, 700, 'Open Sans');
+                    color : rgb(12, 76, 219);
+                    text-decoration: none;
+                    margin-left : rem(8px);
+                    @include prefix(transition,0.5s all ease);
+                    &:hover{
+                        color : rgb(41, 126, 97);
+                    }
+                }
+            }
+        }
+    }
+}

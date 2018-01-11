@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, C:/xampp/htdocs/test/grid/editable/sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 5, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+body {
+  background: #f4f4f4;
+}
+
+/* line 7, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+body p {
+  font-size: 12px;
+}
+
+/* line 11, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container {
+  -webkit-display: grid;
+  -moz-display: grid;
+  -ms-display: grid;
+  -o-display: grid;
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr;
+  grid-template-rows: 100px auto;
+  grid-column-gap: 0.5rem;
+  grid-template-areas: "header header header" "menu content content";
+}
+
+/* line 20, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header, .container .content, .container .menu {
+  padding: 1.875rem;
+}
+
+/* line 23, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .content {
+  grid-area: content;
+  background: grey;
+}
+
+/* line 27, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu {
+  grid-area: menu;
+  background: #f4f4f4;
+}
+
+/* line 31, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock h2 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Open Sans";
+  color: #111312;
+}
+
+/* line 35, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock > ul {
+  margin: 1.5625rem 0 1.5625rem;
+}
+
+/* line 37, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock > ul > li {
+  margin-left: 1.875rem;
+}
+
+/* line 39, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock > ul > li a {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans";
+  color: #218be2;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+
+/* line 44, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock > ul > li a.active {
+  color: #383838;
+}
+
+/* line 48, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock > ul > li.open {
+  background: rgba(67, 116, 187, 0.25);
+}
+
+/* line 51, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock > ul > li ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* line 58, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock > ul > li ul li:last-child {
+  margin-left: 0.9375rem;
+  position: relative;
+}
+
+/* line 61, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock > ul > li ul li:last-child:before {
+  content: "|";
+  position: absolute;
+  top: 0px;
+  left: -0.5rem;
+  color: #242424;
+}
+
+/* line 71, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .menu .menuBlock > ul > li.separate {
+  margin-top: 1.25rem;
+}
+
+/* line 78, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header {
+  grid-area: header;
+  background: #f4f4f4;
+}
+
+/* line 81, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header .containerHeader {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 0.5rem;
+}
+
+/* line 87, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header .containerHeader a.linkLogo {
+  font-size: 35px;
+  font-weight: 800;
+  font-family: "Open Sans";
+  color: #1a1d1c;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+/* line 94, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header .containerHeader form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* line 100, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header .containerHeader form input[type="text"] {
+  border: 1px solid #6b6b6b;
+  padding: 0 0.625rem;
+  height: 2.5rem;
+  width: 18.75rem;
+}
+
+/* line 105, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header .containerHeader form input[type="text"]::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Open Sans";
+  color: #050401;
+}
+
+/* line 110, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header .containerHeader form button {
+  padding: 0rem 0.625rem;
+  margin-left: 0.25rem;
+  cursor: pointer;
+  width: 6.25rem;
+  height: 2.625rem;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Open Sans";
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+/* line 119, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header .containerHeader form a {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Open Sans";
+  color: #0c4cdb;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  -webkit-transition: 0.5s all ease;
+  -moz-transition: 0.5s all ease;
+  -ms-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+/* line 125, C:/xampp/htdocs/test/grid/editable/sass/style.scss */
+.container .header .containerHeader form a:hover {
+  color: #297e61;
+}
+
+/*# sourceMappingURL=../../dist/css/style.map */
